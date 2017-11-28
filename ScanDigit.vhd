@@ -20,7 +20,7 @@ Port(
 End ScanDigit;
 
 Architecture Behavioral of ScanDigit is
-	type state_type is (S1,S2,S3);
+	type state_type is (S1,S2,S3,S4);
 	signal state : state_type;
 	signal rCnt : std_logic_vector(3 downto 0);
 	signal rShift : std_logic_vector(3 downto 0);
@@ -97,12 +97,12 @@ Begin
 								end if;
 								
 				when S3 => 	if(I='1') then
-									state <= S1;
+									state <= S4;
 								else
 									state <= S3;
 								end if;
 								
-								if(rShift="1101") then
+								if(rShift="1110") then
 									dp <= wdp;
 								else 
 									dp <= '0';
@@ -112,6 +112,12 @@ Begin
 									wdp <= not wdp;
 								else
 									wdp <= wdp;
+								end if;
+								
+				when S4 => 	if(I='1') then
+									state <= S1;
+								else
+									state <= S4;
 								end if;
 								
 				when others => state <= S1;

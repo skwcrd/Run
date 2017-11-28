@@ -76,7 +76,7 @@ Begin
 				wDigit3 <= wDigit3;
 			elsif(i1s='1' and wDigit3=9 and wDigit4=9 and rCnt>=9000000) then
 				wDigit3 <= (others => '0');
-			elsif(i1s='1' and wDigit4=9 and rCnt>=9000000) then
+			elsif(i1s='1' and wDigit4>=7 and rCnt>=9000000) then
 				wDigit3 <= wDigit3 + 1;
 			else
 				wDigit3 <= wDigit3;
@@ -85,10 +85,10 @@ Begin
 			---------- Digit4 ----------
 			if(i1s='1' and wDigit1=9 and wDigit2=9 and wDigit3=9 and wDigit4=9) then
 				wDigit4 <= wDigit4;
-			elsif(i1s='1' and wDigit4=9 and rCnt>=9000000) then
-				wDigit4 <= (others => '0');
+			elsif(i1s='1' and wDigit4>=7 and rCnt>=9000000) then
+				wDigit4 <= wDigit4 + 3 - 10;
 			elsif(i1s='1' and rCnt>=9000000) then
-				wDigit4 <= wDigit4 + 1;
+				wDigit4 <= wDigit4 + 3;
 			else
 				wDigit4 <= wDigit4;
 			end if;

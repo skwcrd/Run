@@ -8,12 +8,13 @@ Port(
 	iDigitT1,iDigitT2,iDigitT3,iDigitT4 : in std_logic_vector(3 downto 0);
 	iDigitD1,iDigitD2,iDigitD3,iDigitD4 : in std_logic_vector(3 downto 0);
 	iDigitC1,iDigitC2,iDigitC3,iDigitC4 : in std_logic_vector(3 downto 0);
+	iDigitD01,iDigitD10 : in std_logic_vector(3 downto 0);
 	oDigit1,oDigit2,oDigit3,oDigit4 : out std_logic_vector(3 downto 0)
 );
 End FSM;
 
 Architecture Behavioral of FSM is
-	type state_type is (S1,S2,S3);
+	type state_type is (S1,S2,S3,S4);
 	signal state : state_type;
 Begin
 
@@ -36,9 +37,15 @@ Begin
 								end if;
 								
 				when S3 => 	if(I='1') then
-									state <= S1;
+									state <= S4;
 								else
 									state <= S3;
+								end if;
+								
+				when S4 => 	if(I='1') then
+									state <= S1;
+								else
+									state <= S4;
 								end if;
 								
 				when others => state <= S1;
@@ -64,6 +71,11 @@ Begin
 								oDigit2 <= iDigitC2;
 								oDigit3 <= iDigitC3;
 								oDigit4 <= iDigitC4;
+								
+				when S4 => 	oDigit1 <= "0000";
+								oDigit2 <= "0000";
+								oDigit3 <= iDigitD01;
+								oDigit4 <= iDigitD10;
 			end case;
 		end if;
 	end Process;

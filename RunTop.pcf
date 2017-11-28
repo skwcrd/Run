@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Wed Nov 22 09:44:46 2017
+// Written by: Map P.20131013 on Fri Nov 24 11:20:16 2017
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -33,15 +33,15 @@ TIMEGRP CLK = BEL "u_CLK1ms/r1ms" BEL "u_CLK1s/r1s" BEL "u_CLK0_5s/r0_5s" BEL
         BEL "u_Distance/wDist_7" BEL "u_Distance/wDist_6" BEL
         "u_Distance/wDist_5" BEL "u_Distance/wDist_4" BEL "u_Distance/wDist_3"
         BEL "u_Distance/wDist_2" BEL "u_Distance/wDist_1" BEL
-        "u_Distance/wDist_0" BEL "u_CLK1s/rCnt_0" BEL "u_CLK1s/rCnt_1" BEL
+        "u_Distance/wDist_0" BEL "u_CLK1ms/rCnt_0" BEL "u_CLK1ms/rCnt_1" BEL
+        "u_CLK1ms/rCnt_2" BEL "u_CLK1ms/rCnt_3" BEL "u_CLK1ms/rCnt_4" BEL
+        "u_CLK1ms/rCnt_5" BEL "u_CLK1ms/rCnt_6" BEL "u_CLK1ms/rCnt_7" BEL
+        "u_CLK1ms/rCnt_8" BEL "u_CLK1ms/rCnt_9" BEL "u_CLK1ms/rCnt_10" BEL
+        "u_CLK1ms/rCnt_11" BEL "u_CLK1ms/rCnt_12" BEL "u_CLK1ms/rCnt_13" BEL
+        "u_CLK1ms/rCnt_14" BEL "u_CLK1s/rCnt_0" BEL "u_CLK1s/rCnt_1" BEL
         "u_CLK1s/rCnt_2" BEL "u_CLK1s/rCnt_3" BEL "u_CLK1s/rCnt_4" BEL
         "u_CLK1s/rCnt_5" BEL "u_CLK1s/rCnt_6" BEL "u_CLK1s/rCnt_7" BEL
-        "u_CLK1s/rCnt_8" BEL "u_CLK1s/rCnt_9" BEL "u_CLK1ms/rCnt_0" BEL
-        "u_CLK1ms/rCnt_1" BEL "u_CLK1ms/rCnt_2" BEL "u_CLK1ms/rCnt_3" BEL
-        "u_CLK1ms/rCnt_4" BEL "u_CLK1ms/rCnt_5" BEL "u_CLK1ms/rCnt_6" BEL
-        "u_CLK1ms/rCnt_7" BEL "u_CLK1ms/rCnt_8" BEL "u_CLK1ms/rCnt_9" BEL
-        "u_CLK1ms/rCnt_10" BEL "u_CLK1ms/rCnt_11" BEL "u_CLK1ms/rCnt_12" BEL
-        "u_CLK1ms/rCnt_13" BEL "u_CLK1ms/rCnt_14" BEL "u_CLK0_5s/rCnt_0" BEL
+        "u_CLK1s/rCnt_8" BEL "u_CLK1s/rCnt_9" BEL "u_CLK0_5s/rCnt_0" BEL
         "u_CLK0_5s/rCnt_1" BEL "u_CLK0_5s/rCnt_2" BEL "u_CLK0_5s/rCnt_3" BEL
         "u_CLK0_5s/rCnt_4" BEL "u_CLK0_5s/rCnt_5" BEL "u_CLK0_5s/rCnt_6" BEL
         "u_CLK0_5s/rCnt_7" BEL "u_CLK0_5s/rCnt_8" BEL
@@ -51,12 +51,14 @@ TIMEGRP CLK = BEL "u_CLK1ms/r1ms" BEL "u_CLK1s/r1s" BEL "u_CLK0_5s/r0_5s" BEL
         "u_BCDdistance/wDigit4_2" BEL "u_BCDdistance/wDigit4_3" BEL
         "u_BCDdistance/wDigit2_0" BEL "u_BCDdistance/wDigit2_1" BEL
         "u_BCDdistance/wDigit2_2" BEL "u_BCDdistance/wDigit2_3" BEL
-        "u_Calories/wDigit3_0" BEL "u_Calories/wDigit3_1" BEL
-        "u_Calories/wDigit3_2" BEL "u_Calories/wDigit3_3" BEL
-        "u_Calories/wDigit4_0" BEL "u_Calories/wDigit4_1" BEL
-        "u_Calories/wDigit4_2" BEL "u_Calories/wDigit4_3" BEL
         "u_Calories/wDigit2_0" BEL "u_Calories/wDigit2_1" BEL
         "u_Calories/wDigit2_2" BEL "u_Calories/wDigit2_3" BEL
+        "u_Calories/wDigit3_0" BEL "u_Calories/wDigit3_1" BEL
+        "u_Calories/wDigit3_2" BEL "u_Calories/wDigit3_3" BEL
+        "u_Distance/wDigitD10_0" BEL "u_Distance/wDigitD10_1" BEL
+        "u_Distance/wDigitD10_2" BEL "u_Distance/wDigitD10_3" BEL
+        "u_Distance/wDigitD01_0" BEL "u_Distance/wDigitD01_1" BEL
+        "u_Distance/wDigitD01_2" BEL "u_Distance/wDigitD01_3" BEL
         "u_BCDdistance/rCnt_0" BEL "u_BCDdistance/rCnt_1" BEL
         "u_BCDdistance/rCnt_2" BEL "u_BCDdistance/rCnt_3" BEL
         "u_BCDdistance/rCnt_4" BEL "u_BCDdistance/rCnt_5" BEL
@@ -88,6 +90,8 @@ TIMEGRP CLK = BEL "u_CLK1ms/r1ms" BEL "u_CLK1s/r1s" BEL "u_CLK0_5s/r0_5s" BEL
         "u_Calories/rCnt_25" BEL "u_Calories/rCnt_26" BEL "u_Calories/rCnt_27"
         BEL "u_Calories/rCnt_28" BEL "u_Calories/rCnt_29" BEL
         "u_Calories/rCnt_30" BEL "u_Calories/rCnt_31" BEL
+        "u_Calories/wDigit4_0" BEL "u_Calories/wDigit4_1" BEL
+        "u_Calories/wDigit4_2" BEL "u_Calories/wDigit4_3" BEL
         "u_Calories/wDigit1_0" BEL "u_Calories/wDigit1_1" BEL
         "u_Calories/wDigit1_2" BEL "u_Calories/wDigit1_3" BEL
         "u_Distance/rCnt_0" BEL "u_Distance/rCnt_1" BEL "u_Distance/rCnt_2"
@@ -115,17 +119,17 @@ TIMEGRP CLK = BEL "u_CLK1ms/r1ms" BEL "u_CLK1s/r1s" BEL "u_CLK0_5s/r0_5s" BEL
         "u_Time/wDigit1_2" BEL "u_Time/wDigit1_1" BEL "u_Time/wDigit1_0" BEL
         "u_Time/wDigit2_3" BEL "u_Time/wDigit2_2" BEL "u_Time/wDigit2_1" BEL
         "u_Time/wDigit2_0" BEL "u_Time/wPush" BEL "u_Time/wStop" BEL
-        "u_FSM/state_FSM_FFd2" BEL "u_FSM/oDigit4_3" BEL "u_FSM/oDigit4_2" BEL
-        "u_FSM/oDigit4_1" BEL "u_FSM/oDigit4_0" BEL "u_FSM/oDigit3_3" BEL
-        "u_FSM/oDigit3_2" BEL "u_FSM/oDigit3_1" BEL "u_FSM/oDigit3_0" BEL
-        "u_FSM/oDigit1_3" BEL "u_FSM/oDigit1_2" BEL "u_FSM/oDigit1_1" BEL
-        "u_FSM/oDigit1_0" BEL "u_FSM/oDigit2_3" BEL "u_FSM/oDigit2_2" BEL
-        "u_FSM/oDigit2_1" BEL "u_FSM/oDigit2_0" BEL "u_ScanDigit/rCnt_3" BEL
-        "u_ScanDigit/rCnt_2" BEL "u_ScanDigit/rCnt_1" BEL "u_ScanDigit/rCnt_0"
-        BEL "u_ScanDigit/rShift_0" BEL "u_ScanDigit/rShift_1" BEL
-        "u_ScanDigit/rShift_2" BEL "u_ScanDigit/rShift_3" BEL
-        "u_ScanDigit/state_FSM_FFd2" BEL "u_ScanDigit/dp" BEL
-        "u_ScanDigit/wdp" BEL "u_FSM/state_FSM_FFd1" BEL
+        "u_FSM/oDigit4_3" BEL "u_FSM/oDigit4_2" BEL "u_FSM/oDigit4_1" BEL
+        "u_FSM/oDigit4_0" BEL "u_FSM/oDigit3_3" BEL "u_FSM/oDigit3_2" BEL
+        "u_FSM/oDigit3_1" BEL "u_FSM/oDigit3_0" BEL "u_FSM/oDigit1_3" BEL
+        "u_FSM/oDigit1_2" BEL "u_FSM/oDigit1_1" BEL "u_FSM/oDigit1_0" BEL
+        "u_FSM/oDigit2_3" BEL "u_FSM/oDigit2_2" BEL "u_FSM/oDigit2_1" BEL
+        "u_FSM/oDigit2_0" BEL "u_ScanDigit/rCnt_3" BEL "u_ScanDigit/rCnt_2"
+        BEL "u_ScanDigit/rCnt_1" BEL "u_ScanDigit/rCnt_0" BEL
+        "u_ScanDigit/rShift_0" BEL "u_ScanDigit/rShift_1" BEL
+        "u_ScanDigit/rShift_2" BEL "u_ScanDigit/rShift_3" BEL "u_ScanDigit/dp"
+        BEL "u_ScanDigit/wdp" BEL "u_FSM/state_FSM_FFd2" BEL
+        "u_FSM/state_FSM_FFd1" BEL "u_ScanDigit/state_FSM_FFd2" BEL
         "u_ScanDigit/state_FSM_FFd1" BEL "CLK_BUFGP/BUFG.GCLKMUX" BEL
         "CLK_BUFGP/BUFG";
 ts_clk = PERIOD TIMEGRP "CLK" 40 ns HIGH 50%;

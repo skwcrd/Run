@@ -80,6 +80,7 @@ Architecture Stuctural of RunTop is
 		iDigitT1,iDigitT2,iDigitT3,iDigitT4 : in std_logic_vector(3 downto 0);
 		iDigitD1,iDigitD2,iDigitD3,iDigitD4 : in std_logic_vector(3 downto 0);
 		iDigitC1,iDigitC2,iDigitC3,iDigitC4 : in std_logic_vector(3 downto 0);
+		iDigitD01,iDigitD10 : in std_logic_vector(3 downto 0);
 		oDigit1,oDigit2,oDigit3,oDigit4 : out std_logic_vector(3 downto 0)
 	);
 	End Component FSM;
@@ -117,6 +118,7 @@ Architecture Stuctural of RunTop is
 		CLK,Rstb : in std_logic;
 		i1s : in std_logic;
 		iPush,stop : in std_logic;
+		iDigitD01,iDigitD10 : out std_logic_vector(3 downto 0);
 		oLED : out std_logic_vector(7 downto 0)
 	);
 	End Component Distance;
@@ -126,6 +128,7 @@ Architecture Stuctural of RunTop is
 	signal wDigitT1,wDigitT2,wDigitT3,wDigitT4 : std_logic_vector(3 downto 0);
 	signal wDigitD1,wDigitD2,wDigitD3,wDigitD4 : std_logic_vector(3 downto 0);
 	signal wDigitC1,wDigitC2,wDigitC3,wDigitC4 : std_logic_vector(3 downto 0);
+	signal wDigitD01,wDigitD10 : std_logic_vector(3 downto 0);
 	signal wDigit1,wDigit2,wDigit3,wDigit4 : std_logic_vector(3 downto 0);
 	signal wPush,wChange,wStop : std_logic;
 Begin
@@ -227,6 +230,8 @@ Begin
 		iDigitC2=> wDigitC2,
 		iDigitC3=> wDigitC3,
 		iDigitC4=> wDigitC4,
+		iDigitD01=> wDigitD01,
+		iDigitD10=> wDigitD10,
 		oDigit1=> wDigit1,
 		oDigit2=> wDigit2,
 		oDigit3=> wDigit3,
@@ -262,6 +267,8 @@ Begin
 		i1s=> w1s,
 		iPush=> wPush,
 		stop=> wStop,
+		iDigitD01=> wDigitD01,
+		iDigitD10=> wDigitD10,
 		oLED=> oLED
 	);
 	

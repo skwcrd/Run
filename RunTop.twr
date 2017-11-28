@@ -1,9 +1,9 @@
 --------------------------------------------------------------------------------
-Release 14.7 Trace  (lin64)
+Release 14.7 Trace  (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 5 -n
-3 -fastpaths -xml RunTop.twx RunTop.ncd -o RunTop.twr RunTop.pcf -ucf
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 5
+-n 3 -fastpaths -xml RunTop.twx RunTop.ncd -o RunTop.twr RunTop.pcf -ucf
 RunTop.ucf
 
 Design file:              RunTop.ncd
@@ -37,501 +37,402 @@ INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and
 Timing constraint: ts_clk = PERIOD TIMEGRP "CLK" 40 ns HIGH 50%;
 For more information, see Period Analysis in the Timing Closure User Guide (UG612).
 
- 26161 paths analyzed, 1106 endpoints analyzed, 0 failing endpoints
+ 26921 paths analyzed, 1123 endpoints analyzed, 0 failing endpoints
  0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
- Minimum period is   8.733ns.
+ Minimum period is  10.204ns.
 --------------------------------------------------------------------------------
 
-Paths for end point u_Distance/wDist_4 (SLICE_X37Y7.G1), 28 paths
+Paths for end point u_Distance/wDigitD01_2 (SLICE_X24Y13.CE), 41 paths
 --------------------------------------------------------------------------------
-Slack (setup path):     31.267ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               u_Distance/rCnt_10 (FF)
-  Destination:          u_Distance/wDist_4 (FF)
+Slack (setup path):     29.796ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u_Distance/rCnt_22 (FF)
+  Destination:          u_Distance/wDigitD01_2 (FF)
   Requirement:          40.000ns
-  Data Path Delay:      8.730ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.003ns (0.379 - 0.382)
+  Data Path Delay:      10.203ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.001ns (0.380 - 0.381)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: u_Distance/rCnt_10 to u_Distance/wDist_4
+  Maximum Data Path: u_Distance/rCnt_22 to u_Distance/wDigitD01_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X25Y25.XQ      Tcko                  0.626   u_Distance/rCnt<10>
-                                                       u_Distance/rCnt_10
-    SLICE_X24Y29.G2      net (fanout=2)        1.513   u_Distance/rCnt<10>
-    SLICE_X24Y29.COUT    Topcyg                0.954   u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_lut<3>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-    SLICE_X24Y30.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-    SLICE_X24Y30.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<4>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-    SLICE_X24Y31.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-    SLICE_X24Y31.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<6>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-    SLICE_X24Y32.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-    SLICE_X24Y32.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<8>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-    SLICE_X24Y33.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-    SLICE_X24Y33.XB      Tcinxb                0.383   u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-    SLICE_X37Y9.G3       net (fanout=21)       3.225   u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-    SLICE_X37Y9.Y        Tilo                  0.479   u_Distance/wDist<1>
-                                                       u_Distance/rCnt_mux0002<13>1
-    SLICE_X37Y7.G1       net (fanout=7)        0.688   u_Distance/rCnt_mux0002<13>
-    SLICE_X37Y7.CLK      Tgck                  0.550   u_Distance/wDist<5>
-                                                       u_Distance/wDist_mux0002<3>1
-                                                       u_Distance/wDist_4
+    SLICE_X28Y25.XQ      Tcko                  0.626   u_Distance/rCnt<22>
+                                                       u_Distance/rCnt_22
+    SLICE_X29Y21.G1      net (fanout=2)        1.831   u_Distance/rCnt<22>
+    SLICE_X29Y21.COUT    Topcyg                0.904   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<7>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_lut<7>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<7>
+    SLICE_X29Y22.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<7>
+    SLICE_X29Y22.COUT    Tbyp                  0.111   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<8>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+    SLICE_X29Y23.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+    SLICE_X29Y23.XB      Tcinxb                0.279   u_Distance/wDigitD01_cmp_ge0000
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<10>
+    SLICE_X28Y8.G2       net (fanout=21)       2.063   u_Distance/wDigitD01_cmp_ge0000
+    SLICE_X28Y8.Y        Tilo                  0.529   N91
+                                                       u_Distance/wDigitD01_not000111
+    SLICE_X28Y8.F4       net (fanout=6)        0.022   u_Distance/wDist_not0002
+    SLICE_X28Y8.X        Tilo                  0.529   N91
+                                                       u_Distance/wDigitD01_not00011_SW0
+    SLICE_X34Y8.F3       net (fanout=1)        0.641   N91
+    SLICE_X34Y8.X        Tilo                  0.529   u_Distance/wDigitD01_not0001
+                                                       u_Distance/wDigitD01_not00011
+    SLICE_X24Y13.CE      net (fanout=3)        1.615   u_Distance/wDigitD01_not0001
+    SLICE_X24Y13.CLK     Tceck                 0.524   u_Distance/wDigitD01<2>
+                                                       u_Distance/wDigitD01_2
     -------------------------------------------------  ---------------------------
-    Total                                      8.730ns (3.304ns logic, 5.426ns route)
-                                                       (37.8% logic, 62.2% route)
+    Total                                     10.203ns (4.031ns logic, 6.172ns route)
+                                                       (39.5% logic, 60.5% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     31.706ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               u_Distance/rCnt_5 (FF)
-  Destination:          u_Distance/wDist_4 (FF)
+Slack (setup path):     30.514ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u_Distance/rCnt_18 (FF)
+  Destination:          u_Distance/wDigitD01_2 (FF)
   Requirement:          40.000ns
-  Data Path Delay:      8.292ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.002ns (0.257 - 0.259)
+  Data Path Delay:      9.484ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.002ns (0.123 - 0.125)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: u_Distance/rCnt_5 to u_Distance/wDist_4
+  Maximum Data Path: u_Distance/rCnt_18 to u_Distance/wDigitD01_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X25Y22.YQ      Tcko                  0.626   u_Distance/rCnt<4>
-                                                       u_Distance/rCnt_5
-    SLICE_X24Y28.F4      net (fanout=2)        0.981   u_Distance/rCnt<5>
-    SLICE_X24Y28.COUT    Topcyf                0.944   u_Distance/Mcompar_wDist_cmp_lt0000_cy<1>
-                                                       u_Distance/rCnt<5>_rt
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<0>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<1>
-    SLICE_X24Y29.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<1>
-    SLICE_X24Y29.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<2>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-    SLICE_X24Y30.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-    SLICE_X24Y30.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<4>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-    SLICE_X24Y31.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-    SLICE_X24Y31.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<6>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-    SLICE_X24Y32.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-    SLICE_X24Y32.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<8>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-    SLICE_X24Y33.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-    SLICE_X24Y33.XB      Tcinxb                0.383   u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-    SLICE_X37Y9.G3       net (fanout=21)       3.225   u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-    SLICE_X37Y9.Y        Tilo                  0.479   u_Distance/wDist<1>
-                                                       u_Distance/rCnt_mux0002<13>1
-    SLICE_X37Y7.G1       net (fanout=7)        0.688   u_Distance/rCnt_mux0002<13>
-    SLICE_X37Y7.CLK      Tgck                  0.550   u_Distance/wDist<5>
-                                                       u_Distance/wDist_mux0002<3>1
-                                                       u_Distance/wDist_4
+    SLICE_X28Y23.XQ      Tcko                  0.626   u_Distance/rCnt<18>
+                                                       u_Distance/rCnt_18
+    SLICE_X29Y21.F2      net (fanout=2)        1.122   u_Distance/rCnt<18>
+    SLICE_X29Y21.COUT    Topcyf                0.894   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<7>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_lut<6>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<6>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<7>
+    SLICE_X29Y22.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<7>
+    SLICE_X29Y22.COUT    Tbyp                  0.111   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<8>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+    SLICE_X29Y23.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+    SLICE_X29Y23.XB      Tcinxb                0.279   u_Distance/wDigitD01_cmp_ge0000
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<10>
+    SLICE_X28Y8.G2       net (fanout=21)       2.063   u_Distance/wDigitD01_cmp_ge0000
+    SLICE_X28Y8.Y        Tilo                  0.529   N91
+                                                       u_Distance/wDigitD01_not000111
+    SLICE_X28Y8.F4       net (fanout=6)        0.022   u_Distance/wDist_not0002
+    SLICE_X28Y8.X        Tilo                  0.529   N91
+                                                       u_Distance/wDigitD01_not00011_SW0
+    SLICE_X34Y8.F3       net (fanout=1)        0.641   N91
+    SLICE_X34Y8.X        Tilo                  0.529   u_Distance/wDigitD01_not0001
+                                                       u_Distance/wDigitD01_not00011
+    SLICE_X24Y13.CE      net (fanout=3)        1.615   u_Distance/wDigitD01_not0001
+    SLICE_X24Y13.CLK     Tceck                 0.524   u_Distance/wDigitD01<2>
+                                                       u_Distance/wDigitD01_2
     -------------------------------------------------  ---------------------------
-    Total                                      8.292ns (3.398ns logic, 4.894ns route)
-                                                       (41.0% logic, 59.0% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     31.753ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               u_Distance/rCnt_6 (FF)
-  Destination:          u_Distance/wDist_4 (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      8.245ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.002ns (0.257 - 0.259)
-  Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: u_Distance/rCnt_6 to u_Distance/wDist_4
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X25Y23.XQ      Tcko                  0.626   u_Distance/rCnt<6>
-                                                       u_Distance/rCnt_6
-    SLICE_X24Y28.G3      net (fanout=2)        0.924   u_Distance/rCnt<6>
-    SLICE_X24Y28.COUT    Topcyg                0.954   u_Distance/Mcompar_wDist_cmp_lt0000_cy<1>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_lut<1>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<1>
-    SLICE_X24Y29.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<1>
-    SLICE_X24Y29.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<2>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-    SLICE_X24Y30.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-    SLICE_X24Y30.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<4>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-    SLICE_X24Y31.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-    SLICE_X24Y31.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<6>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-    SLICE_X24Y32.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-    SLICE_X24Y32.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<8>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-    SLICE_X24Y33.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-    SLICE_X24Y33.XB      Tcinxb                0.383   u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-    SLICE_X37Y9.G3       net (fanout=21)       3.225   u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-    SLICE_X37Y9.Y        Tilo                  0.479   u_Distance/wDist<1>
-                                                       u_Distance/rCnt_mux0002<13>1
-    SLICE_X37Y7.G1       net (fanout=7)        0.688   u_Distance/rCnt_mux0002<13>
-    SLICE_X37Y7.CLK      Tgck                  0.550   u_Distance/wDist<5>
-                                                       u_Distance/wDist_mux0002<3>1
-                                                       u_Distance/wDist_4
-    -------------------------------------------------  ---------------------------
-    Total                                      8.245ns (3.408ns logic, 4.837ns route)
-                                                       (41.3% logic, 58.7% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point u_Distance/wDist_5 (SLICE_X37Y7.F1), 28 paths
---------------------------------------------------------------------------------
-Slack (setup path):     31.394ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               u_Distance/rCnt_10 (FF)
-  Destination:          u_Distance/wDist_5 (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      8.603ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.003ns (0.379 - 0.382)
-  Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: u_Distance/rCnt_10 to u_Distance/wDist_5
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X25Y25.XQ      Tcko                  0.626   u_Distance/rCnt<10>
-                                                       u_Distance/rCnt_10
-    SLICE_X24Y29.G2      net (fanout=2)        1.513   u_Distance/rCnt<10>
-    SLICE_X24Y29.COUT    Topcyg                0.954   u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_lut<3>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-    SLICE_X24Y30.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-    SLICE_X24Y30.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<4>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-    SLICE_X24Y31.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-    SLICE_X24Y31.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<6>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-    SLICE_X24Y32.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-    SLICE_X24Y32.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<8>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-    SLICE_X24Y33.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-    SLICE_X24Y33.XB      Tcinxb                0.383   u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-    SLICE_X37Y9.G3       net (fanout=21)       3.225   u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-    SLICE_X37Y9.Y        Tilo                  0.479   u_Distance/wDist<1>
-                                                       u_Distance/rCnt_mux0002<13>1
-    SLICE_X37Y7.F1       net (fanout=7)        0.561   u_Distance/rCnt_mux0002<13>
-    SLICE_X37Y7.CLK      Tfck                  0.550   u_Distance/wDist<5>
-                                                       u_Distance/wDist_mux0002<2>1
-                                                       u_Distance/wDist_5
-    -------------------------------------------------  ---------------------------
-    Total                                      8.603ns (3.304ns logic, 5.299ns route)
-                                                       (38.4% logic, 61.6% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     31.833ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               u_Distance/rCnt_5 (FF)
-  Destination:          u_Distance/wDist_5 (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      8.165ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.002ns (0.257 - 0.259)
-  Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: u_Distance/rCnt_5 to u_Distance/wDist_5
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X25Y22.YQ      Tcko                  0.626   u_Distance/rCnt<4>
-                                                       u_Distance/rCnt_5
-    SLICE_X24Y28.F4      net (fanout=2)        0.981   u_Distance/rCnt<5>
-    SLICE_X24Y28.COUT    Topcyf                0.944   u_Distance/Mcompar_wDist_cmp_lt0000_cy<1>
-                                                       u_Distance/rCnt<5>_rt
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<0>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<1>
-    SLICE_X24Y29.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<1>
-    SLICE_X24Y29.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<2>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-    SLICE_X24Y30.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-    SLICE_X24Y30.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<4>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-    SLICE_X24Y31.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-    SLICE_X24Y31.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<6>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-    SLICE_X24Y32.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-    SLICE_X24Y32.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<8>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-    SLICE_X24Y33.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-    SLICE_X24Y33.XB      Tcinxb                0.383   u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-    SLICE_X37Y9.G3       net (fanout=21)       3.225   u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-    SLICE_X37Y9.Y        Tilo                  0.479   u_Distance/wDist<1>
-                                                       u_Distance/rCnt_mux0002<13>1
-    SLICE_X37Y7.F1       net (fanout=7)        0.561   u_Distance/rCnt_mux0002<13>
-    SLICE_X37Y7.CLK      Tfck                  0.550   u_Distance/wDist<5>
-                                                       u_Distance/wDist_mux0002<2>1
-                                                       u_Distance/wDist_5
-    -------------------------------------------------  ---------------------------
-    Total                                      8.165ns (3.398ns logic, 4.767ns route)
-                                                       (41.6% logic, 58.4% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     31.880ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               u_Distance/rCnt_6 (FF)
-  Destination:          u_Distance/wDist_5 (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      8.118ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.002ns (0.257 - 0.259)
-  Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: u_Distance/rCnt_6 to u_Distance/wDist_5
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X25Y23.XQ      Tcko                  0.626   u_Distance/rCnt<6>
-                                                       u_Distance/rCnt_6
-    SLICE_X24Y28.G3      net (fanout=2)        0.924   u_Distance/rCnt<6>
-    SLICE_X24Y28.COUT    Topcyg                0.954   u_Distance/Mcompar_wDist_cmp_lt0000_cy<1>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_lut<1>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<1>
-    SLICE_X24Y29.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<1>
-    SLICE_X24Y29.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<2>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-    SLICE_X24Y30.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-    SLICE_X24Y30.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<4>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-    SLICE_X24Y31.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-    SLICE_X24Y31.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<6>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-    SLICE_X24Y32.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-    SLICE_X24Y32.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<8>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-    SLICE_X24Y33.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-    SLICE_X24Y33.XB      Tcinxb                0.383   u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-    SLICE_X37Y9.G3       net (fanout=21)       3.225   u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-    SLICE_X37Y9.Y        Tilo                  0.479   u_Distance/wDist<1>
-                                                       u_Distance/rCnt_mux0002<13>1
-    SLICE_X37Y7.F1       net (fanout=7)        0.561   u_Distance/rCnt_mux0002<13>
-    SLICE_X37Y7.CLK      Tfck                  0.550   u_Distance/wDist<5>
-                                                       u_Distance/wDist_mux0002<2>1
-                                                       u_Distance/wDist_5
-    -------------------------------------------------  ---------------------------
-    Total                                      8.118ns (3.408ns logic, 4.710ns route)
-                                                       (42.0% logic, 58.0% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point u_Distance/wDist_6 (SLICE_X36Y6.G4), 28 paths
---------------------------------------------------------------------------------
-Slack (setup path):     31.432ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               u_Distance/rCnt_10 (FF)
-  Destination:          u_Distance/wDist_6 (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      8.565ns (Levels of Logic = 7)
-  Clock Path Skew:      -0.003ns (0.379 - 0.382)
-  Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: u_Distance/rCnt_10 to u_Distance/wDist_6
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X25Y25.XQ      Tcko                  0.626   u_Distance/rCnt<10>
-                                                       u_Distance/rCnt_10
-    SLICE_X24Y29.G2      net (fanout=2)        1.513   u_Distance/rCnt<10>
-    SLICE_X24Y29.COUT    Topcyg                0.954   u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_lut<3>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-    SLICE_X24Y30.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-    SLICE_X24Y30.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<4>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-    SLICE_X24Y31.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-    SLICE_X24Y31.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<6>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-    SLICE_X24Y32.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-    SLICE_X24Y32.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<8>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-    SLICE_X24Y33.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-    SLICE_X24Y33.XB      Tcinxb                0.383   u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-    SLICE_X37Y9.G3       net (fanout=21)       3.225   u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-    SLICE_X37Y9.Y        Tilo                  0.479   u_Distance/wDist<1>
-                                                       u_Distance/rCnt_mux0002<13>1
-    SLICE_X36Y6.G4       net (fanout=7)        0.473   u_Distance/rCnt_mux0002<13>
-    SLICE_X36Y6.CLK      Tgck                  0.600   u_Distance/wDist<7>
-                                                       u_Distance/wDist_mux0002<1>1
-                                                       u_Distance/wDist_6
-    -------------------------------------------------  ---------------------------
-    Total                                      8.565ns (3.354ns logic, 5.211ns route)
-                                                       (39.2% logic, 60.8% route)
-
---------------------------------------------------------------------------------
-Slack (setup path):     31.871ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               u_Distance/rCnt_5 (FF)
-  Destination:          u_Distance/wDist_6 (FF)
-  Requirement:          40.000ns
-  Data Path Delay:      8.127ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.002ns (0.257 - 0.259)
-  Source Clock:         CLK_BUFGP rising at 0.000ns
-  Destination Clock:    CLK_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.000ns
-
-  Maximum Data Path: u_Distance/rCnt_5 to u_Distance/wDist_6
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X25Y22.YQ      Tcko                  0.626   u_Distance/rCnt<4>
-                                                       u_Distance/rCnt_5
-    SLICE_X24Y28.F4      net (fanout=2)        0.981   u_Distance/rCnt<5>
-    SLICE_X24Y28.COUT    Topcyf                0.944   u_Distance/Mcompar_wDist_cmp_lt0000_cy<1>
-                                                       u_Distance/rCnt<5>_rt
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<0>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<1>
-    SLICE_X24Y29.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<1>
-    SLICE_X24Y29.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<2>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-    SLICE_X24Y30.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-    SLICE_X24Y30.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<4>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-    SLICE_X24Y31.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-    SLICE_X24Y31.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<6>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-    SLICE_X24Y32.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-    SLICE_X24Y32.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<8>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-    SLICE_X24Y33.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-    SLICE_X24Y33.XB      Tcinxb                0.383   u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-    SLICE_X37Y9.G3       net (fanout=21)       3.225   u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-    SLICE_X37Y9.Y        Tilo                  0.479   u_Distance/wDist<1>
-                                                       u_Distance/rCnt_mux0002<13>1
-    SLICE_X36Y6.G4       net (fanout=7)        0.473   u_Distance/rCnt_mux0002<13>
-    SLICE_X36Y6.CLK      Tgck                  0.600   u_Distance/wDist<7>
-                                                       u_Distance/wDist_mux0002<1>1
-                                                       u_Distance/wDist_6
-    -------------------------------------------------  ---------------------------
-    Total                                      8.127ns (3.448ns logic, 4.679ns route)
+    Total                                      9.484ns (4.021ns logic, 5.463ns route)
                                                        (42.4% logic, 57.6% route)
 
 --------------------------------------------------------------------------------
-Slack (setup path):     31.918ns (requirement - (data path - clock path skew + uncertainty))
-  Source:               u_Distance/rCnt_6 (FF)
-  Destination:          u_Distance/wDist_6 (FF)
+Slack (setup path):     30.535ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u_Distance/rCnt_28 (FF)
+  Destination:          u_Distance/wDigitD01_2 (FF)
   Requirement:          40.000ns
-  Data Path Delay:      8.080ns (Levels of Logic = 8)
-  Clock Path Skew:      -0.002ns (0.257 - 0.259)
+  Data Path Delay:      9.464ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.001ns (0.380 - 0.381)
   Source Clock:         CLK_BUFGP rising at 0.000ns
   Destination Clock:    CLK_BUFGP rising at 40.000ns
   Clock Uncertainty:    0.000ns
 
-  Maximum Data Path: u_Distance/rCnt_6 to u_Distance/wDist_6
+  Maximum Data Path: u_Distance/rCnt_28 to u_Distance/wDigitD01_2
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X25Y23.XQ      Tcko                  0.626   u_Distance/rCnt<6>
-                                                       u_Distance/rCnt_6
-    SLICE_X24Y28.G3      net (fanout=2)        0.924   u_Distance/rCnt<6>
-    SLICE_X24Y28.COUT    Topcyg                0.954   u_Distance/Mcompar_wDist_cmp_lt0000_cy<1>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_lut<1>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<1>
-    SLICE_X24Y29.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<1>
-    SLICE_X24Y29.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<2>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-    SLICE_X24Y30.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<3>
-    SLICE_X24Y30.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<4>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-    SLICE_X24Y31.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<5>
-    SLICE_X24Y31.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<6>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-    SLICE_X24Y32.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<7>
-    SLICE_X24Y32.COUT    Tbyp                  0.104   u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<8>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-    SLICE_X24Y33.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDist_cmp_lt0000_cy<9>
-    SLICE_X24Y33.XB      Tcinxb                0.383   u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-                                                       u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-    SLICE_X37Y9.G3       net (fanout=21)       3.225   u_Distance/Mcompar_wDist_cmp_lt0000_cy<10>
-    SLICE_X37Y9.Y        Tilo                  0.479   u_Distance/wDist<1>
-                                                       u_Distance/rCnt_mux0002<13>1
-    SLICE_X36Y6.G4       net (fanout=7)        0.473   u_Distance/rCnt_mux0002<13>
-    SLICE_X36Y6.CLK      Tgck                  0.600   u_Distance/wDist<7>
-                                                       u_Distance/wDist_mux0002<1>1
-                                                       u_Distance/wDist_6
+    SLICE_X28Y28.XQ      Tcko                  0.626   u_Distance/rCnt<28>
+                                                       u_Distance/rCnt_28
+    SLICE_X29Y22.G1      net (fanout=2)        1.203   u_Distance/rCnt<28>
+    SLICE_X29Y22.COUT    Topcyg                0.904   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_lut<9>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+    SLICE_X29Y23.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+    SLICE_X29Y23.XB      Tcinxb                0.279   u_Distance/wDigitD01_cmp_ge0000
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<10>
+    SLICE_X28Y8.G2       net (fanout=21)       2.063   u_Distance/wDigitD01_cmp_ge0000
+    SLICE_X28Y8.Y        Tilo                  0.529   N91
+                                                       u_Distance/wDigitD01_not000111
+    SLICE_X28Y8.F4       net (fanout=6)        0.022   u_Distance/wDist_not0002
+    SLICE_X28Y8.X        Tilo                  0.529   N91
+                                                       u_Distance/wDigitD01_not00011_SW0
+    SLICE_X34Y8.F3       net (fanout=1)        0.641   N91
+    SLICE_X34Y8.X        Tilo                  0.529   u_Distance/wDigitD01_not0001
+                                                       u_Distance/wDigitD01_not00011
+    SLICE_X24Y13.CE      net (fanout=3)        1.615   u_Distance/wDigitD01_not0001
+    SLICE_X24Y13.CLK     Tceck                 0.524   u_Distance/wDigitD01<2>
+                                                       u_Distance/wDigitD01_2
     -------------------------------------------------  ---------------------------
-    Total                                      8.080ns (3.458ns logic, 4.622ns route)
-                                                       (42.8% logic, 57.2% route)
+    Total                                      9.464ns (3.920ns logic, 5.544ns route)
+                                                       (41.4% logic, 58.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u_Distance/wDigitD01_0 (SLICE_X24Y13.CE), 41 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     29.796ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u_Distance/rCnt_22 (FF)
+  Destination:          u_Distance/wDigitD01_0 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      10.203ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.001ns (0.380 - 0.381)
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: u_Distance/rCnt_22 to u_Distance/wDigitD01_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y25.XQ      Tcko                  0.626   u_Distance/rCnt<22>
+                                                       u_Distance/rCnt_22
+    SLICE_X29Y21.G1      net (fanout=2)        1.831   u_Distance/rCnt<22>
+    SLICE_X29Y21.COUT    Topcyg                0.904   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<7>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_lut<7>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<7>
+    SLICE_X29Y22.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<7>
+    SLICE_X29Y22.COUT    Tbyp                  0.111   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<8>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+    SLICE_X29Y23.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+    SLICE_X29Y23.XB      Tcinxb                0.279   u_Distance/wDigitD01_cmp_ge0000
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<10>
+    SLICE_X28Y8.G2       net (fanout=21)       2.063   u_Distance/wDigitD01_cmp_ge0000
+    SLICE_X28Y8.Y        Tilo                  0.529   N91
+                                                       u_Distance/wDigitD01_not000111
+    SLICE_X28Y8.F4       net (fanout=6)        0.022   u_Distance/wDist_not0002
+    SLICE_X28Y8.X        Tilo                  0.529   N91
+                                                       u_Distance/wDigitD01_not00011_SW0
+    SLICE_X34Y8.F3       net (fanout=1)        0.641   N91
+    SLICE_X34Y8.X        Tilo                  0.529   u_Distance/wDigitD01_not0001
+                                                       u_Distance/wDigitD01_not00011
+    SLICE_X24Y13.CE      net (fanout=3)        1.615   u_Distance/wDigitD01_not0001
+    SLICE_X24Y13.CLK     Tceck                 0.524   u_Distance/wDigitD01<2>
+                                                       u_Distance/wDigitD01_0
+    -------------------------------------------------  ---------------------------
+    Total                                     10.203ns (4.031ns logic, 6.172ns route)
+                                                       (39.5% logic, 60.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     30.514ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u_Distance/rCnt_18 (FF)
+  Destination:          u_Distance/wDigitD01_0 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      9.484ns (Levels of Logic = 6)
+  Clock Path Skew:      -0.002ns (0.123 - 0.125)
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: u_Distance/rCnt_18 to u_Distance/wDigitD01_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y23.XQ      Tcko                  0.626   u_Distance/rCnt<18>
+                                                       u_Distance/rCnt_18
+    SLICE_X29Y21.F2      net (fanout=2)        1.122   u_Distance/rCnt<18>
+    SLICE_X29Y21.COUT    Topcyf                0.894   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<7>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_lut<6>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<6>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<7>
+    SLICE_X29Y22.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<7>
+    SLICE_X29Y22.COUT    Tbyp                  0.111   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<8>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+    SLICE_X29Y23.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+    SLICE_X29Y23.XB      Tcinxb                0.279   u_Distance/wDigitD01_cmp_ge0000
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<10>
+    SLICE_X28Y8.G2       net (fanout=21)       2.063   u_Distance/wDigitD01_cmp_ge0000
+    SLICE_X28Y8.Y        Tilo                  0.529   N91
+                                                       u_Distance/wDigitD01_not000111
+    SLICE_X28Y8.F4       net (fanout=6)        0.022   u_Distance/wDist_not0002
+    SLICE_X28Y8.X        Tilo                  0.529   N91
+                                                       u_Distance/wDigitD01_not00011_SW0
+    SLICE_X34Y8.F3       net (fanout=1)        0.641   N91
+    SLICE_X34Y8.X        Tilo                  0.529   u_Distance/wDigitD01_not0001
+                                                       u_Distance/wDigitD01_not00011
+    SLICE_X24Y13.CE      net (fanout=3)        1.615   u_Distance/wDigitD01_not0001
+    SLICE_X24Y13.CLK     Tceck                 0.524   u_Distance/wDigitD01<2>
+                                                       u_Distance/wDigitD01_0
+    -------------------------------------------------  ---------------------------
+    Total                                      9.484ns (4.021ns logic, 5.463ns route)
+                                                       (42.4% logic, 57.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     30.535ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u_Distance/rCnt_28 (FF)
+  Destination:          u_Distance/wDigitD01_0 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      9.464ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.001ns (0.380 - 0.381)
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: u_Distance/rCnt_28 to u_Distance/wDigitD01_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y28.XQ      Tcko                  0.626   u_Distance/rCnt<28>
+                                                       u_Distance/rCnt_28
+    SLICE_X29Y22.G1      net (fanout=2)        1.203   u_Distance/rCnt<28>
+    SLICE_X29Y22.COUT    Topcyg                0.904   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_lut<9>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+    SLICE_X29Y23.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+    SLICE_X29Y23.XB      Tcinxb                0.279   u_Distance/wDigitD01_cmp_ge0000
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<10>
+    SLICE_X28Y8.G2       net (fanout=21)       2.063   u_Distance/wDigitD01_cmp_ge0000
+    SLICE_X28Y8.Y        Tilo                  0.529   N91
+                                                       u_Distance/wDigitD01_not000111
+    SLICE_X28Y8.F4       net (fanout=6)        0.022   u_Distance/wDist_not0002
+    SLICE_X28Y8.X        Tilo                  0.529   N91
+                                                       u_Distance/wDigitD01_not00011_SW0
+    SLICE_X34Y8.F3       net (fanout=1)        0.641   N91
+    SLICE_X34Y8.X        Tilo                  0.529   u_Distance/wDigitD01_not0001
+                                                       u_Distance/wDigitD01_not00011
+    SLICE_X24Y13.CE      net (fanout=3)        1.615   u_Distance/wDigitD01_not0001
+    SLICE_X24Y13.CLK     Tceck                 0.524   u_Distance/wDigitD01<2>
+                                                       u_Distance/wDigitD01_0
+    -------------------------------------------------  ---------------------------
+    Total                                      9.464ns (3.920ns logic, 5.544ns route)
+                                                       (41.4% logic, 58.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u_Distance/wDigitD10_1 (SLICE_X25Y10.CE), 37 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     30.244ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u_Distance/rCnt_22 (FF)
+  Destination:          u_Distance/wDigitD10_1 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      9.755ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.001ns (0.380 - 0.381)
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: u_Distance/rCnt_22 to u_Distance/wDigitD10_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y25.XQ      Tcko                  0.626   u_Distance/rCnt<22>
+                                                       u_Distance/rCnt_22
+    SLICE_X29Y21.G1      net (fanout=2)        1.831   u_Distance/rCnt<22>
+    SLICE_X29Y21.COUT    Topcyg                0.904   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<7>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_lut<7>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<7>
+    SLICE_X29Y22.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<7>
+    SLICE_X29Y22.COUT    Tbyp                  0.111   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<8>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+    SLICE_X29Y23.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+    SLICE_X29Y23.XB      Tcinxb                0.279   u_Distance/wDigitD01_cmp_ge0000
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<10>
+    SLICE_X28Y8.G2       net (fanout=21)       2.063   u_Distance/wDigitD01_cmp_ge0000
+    SLICE_X28Y8.Y        Tilo                  0.529   N91
+                                                       u_Distance/wDigitD01_not000111
+    SLICE_X35Y9.F1       net (fanout=6)        0.858   u_Distance/wDist_not0002
+    SLICE_X35Y9.X        Tilo                  0.479   u_Distance/wDigitD10_not0001
+                                                       u_Distance/wDigitD10_not00011
+    SLICE_X25Y10.CE      net (fanout=3)        1.551   u_Distance/wDigitD10_not0001
+    SLICE_X25Y10.CLK     Tceck                 0.524   u_Distance/wDigitD10<1>
+                                                       u_Distance/wDigitD10_1
+    -------------------------------------------------  ---------------------------
+    Total                                      9.755ns (3.452ns logic, 6.303ns route)
+                                                       (35.4% logic, 64.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     30.962ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u_Distance/rCnt_18 (FF)
+  Destination:          u_Distance/wDigitD10_1 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      9.036ns (Levels of Logic = 5)
+  Clock Path Skew:      -0.002ns (0.123 - 0.125)
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: u_Distance/rCnt_18 to u_Distance/wDigitD10_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y23.XQ      Tcko                  0.626   u_Distance/rCnt<18>
+                                                       u_Distance/rCnt_18
+    SLICE_X29Y21.F2      net (fanout=2)        1.122   u_Distance/rCnt<18>
+    SLICE_X29Y21.COUT    Topcyf                0.894   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<7>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_lut<6>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<6>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<7>
+    SLICE_X29Y22.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<7>
+    SLICE_X29Y22.COUT    Tbyp                  0.111   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<8>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+    SLICE_X29Y23.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+    SLICE_X29Y23.XB      Tcinxb                0.279   u_Distance/wDigitD01_cmp_ge0000
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<10>
+    SLICE_X28Y8.G2       net (fanout=21)       2.063   u_Distance/wDigitD01_cmp_ge0000
+    SLICE_X28Y8.Y        Tilo                  0.529   N91
+                                                       u_Distance/wDigitD01_not000111
+    SLICE_X35Y9.F1       net (fanout=6)        0.858   u_Distance/wDist_not0002
+    SLICE_X35Y9.X        Tilo                  0.479   u_Distance/wDigitD10_not0001
+                                                       u_Distance/wDigitD10_not00011
+    SLICE_X25Y10.CE      net (fanout=3)        1.551   u_Distance/wDigitD10_not0001
+    SLICE_X25Y10.CLK     Tceck                 0.524   u_Distance/wDigitD10<1>
+                                                       u_Distance/wDigitD10_1
+    -------------------------------------------------  ---------------------------
+    Total                                      9.036ns (3.442ns logic, 5.594ns route)
+                                                       (38.1% logic, 61.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     30.983ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               u_Distance/rCnt_28 (FF)
+  Destination:          u_Distance/wDigitD10_1 (FF)
+  Requirement:          40.000ns
+  Data Path Delay:      9.016ns (Levels of Logic = 4)
+  Clock Path Skew:      -0.001ns (0.380 - 0.381)
+  Source Clock:         CLK_BUFGP rising at 0.000ns
+  Destination Clock:    CLK_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: u_Distance/rCnt_28 to u_Distance/wDigitD10_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X28Y28.XQ      Tcko                  0.626   u_Distance/rCnt<28>
+                                                       u_Distance/rCnt_28
+    SLICE_X29Y22.G1      net (fanout=2)        1.203   u_Distance/rCnt<28>
+    SLICE_X29Y22.COUT    Topcyg                0.904   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_lut<9>
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+    SLICE_X29Y23.CIN     net (fanout=1)        0.000   u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<9>
+    SLICE_X29Y23.XB      Tcinxb                0.279   u_Distance/wDigitD01_cmp_ge0000
+                                                       u_Distance/Mcompar_wDigitD01_cmp_ge0000_cy<10>
+    SLICE_X28Y8.G2       net (fanout=21)       2.063   u_Distance/wDigitD01_cmp_ge0000
+    SLICE_X28Y8.Y        Tilo                  0.529   N91
+                                                       u_Distance/wDigitD01_not000111
+    SLICE_X35Y9.F1       net (fanout=6)        0.858   u_Distance/wDist_not0002
+    SLICE_X35Y9.X        Tilo                  0.479   u_Distance/wDigitD10_not0001
+                                                       u_Distance/wDigitD10_not00011
+    SLICE_X25Y10.CE      net (fanout=3)        1.551   u_Distance/wDigitD10_not0001
+    SLICE_X25Y10.CLK     Tceck                 0.524   u_Distance/wDigitD10<1>
+                                                       u_Distance/wDigitD10_1
+    -------------------------------------------------  ---------------------------
+    Total                                      9.016ns (3.341ns logic, 5.675ns route)
+                                                       (37.1% logic, 62.9% route)
 
 --------------------------------------------------------------------------------
 
 Hold Paths: ts_clk = PERIOD TIMEGRP "CLK" 40 ns HIGH 50%;
 --------------------------------------------------------------------------------
 
-Paths for end point u_Change/rDebouce_1 (SLICE_X9Y15.BX), 1 path
---------------------------------------------------------------------------------
-Slack (hold path):      0.703ns (requirement - (clock path skew + uncertainty - data path))
-  Source:               u_Change/rDebouce_0 (FF)
-  Destination:          u_Change/rDebouce_1 (FF)
-  Requirement:          0.000ns
-  Data Path Delay:      0.703ns (Levels of Logic = 0)
-  Clock Path Skew:      0.000ns
-  Source Clock:         CLK_BUFGP rising at 40.000ns
-  Destination Clock:    CLK_BUFGP rising at 40.000ns
-  Clock Uncertainty:    0.000ns
-
-  Minimum Data Path: u_Change/rDebouce_0 to u_Change/rDebouce_1
-    Location             Delay type         Delay(ns)  Physical Resource
-                                                       Logical Resource(s)
-    -------------------------------------------------  -------------------
-    SLICE_X9Y15.YQ       Tcko                  0.501   u_Change/rDebouce<1>
-                                                       u_Change/rDebouce_0
-    SLICE_X9Y15.BX       net (fanout=2)        0.448   u_Change/rDebouce<0>
-    SLICE_X9Y15.CLK      Tckdi       (-Th)     0.246   u_Change/rDebouce<1>
-                                                       u_Change/rDebouce_1
-    -------------------------------------------------  ---------------------------
-    Total                                      0.703ns (0.255ns logic, 0.448ns route)
-                                                       (36.3% logic, 63.7% route)
-
---------------------------------------------------------------------------------
-
-Paths for end point u_Change/rDebouce_3 (SLICE_X8Y15.BX), 1 path
+Paths for end point u_Change/rDebouce_3 (SLICE_X8Y13.BX), 1 path
 --------------------------------------------------------------------------------
 Slack (hold path):      0.703ns (requirement - (clock path skew + uncertainty - data path))
   Source:               u_Change/rDebouce_2 (FF)
@@ -547,10 +448,10 @@ Slack (hold path):      0.703ns (requirement - (clock path skew + uncertainty - 
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X8Y15.YQ       Tcko                  0.501   u_Change/rDebouce<3>
+    SLICE_X8Y13.YQ       Tcko                  0.501   u_Change/rDebouce<3>
                                                        u_Change/rDebouce_2
-    SLICE_X8Y15.BX       net (fanout=2)        0.448   u_Change/rDebouce<2>
-    SLICE_X8Y15.CLK      Tckdi       (-Th)     0.246   u_Change/rDebouce<3>
+    SLICE_X8Y13.BX       net (fanout=2)        0.448   u_Change/rDebouce<2>
+    SLICE_X8Y13.CLK      Tckdi       (-Th)     0.246   u_Change/rDebouce<3>
                                                        u_Change/rDebouce_3
     -------------------------------------------------  ---------------------------
     Total                                      0.703ns (0.255ns logic, 0.448ns route)
@@ -558,7 +459,7 @@ Slack (hold path):      0.703ns (requirement - (clock path skew + uncertainty - 
 
 --------------------------------------------------------------------------------
 
-Paths for end point u_Push/rDebouce_1 (SLICE_X15Y15.BX), 1 path
+Paths for end point u_Push/rDebouce_1 (SLICE_X12Y13.BX), 1 path
 --------------------------------------------------------------------------------
 Slack (hold path):      0.703ns (requirement - (clock path skew + uncertainty - data path))
   Source:               u_Push/rDebouce_0 (FF)
@@ -574,11 +475,38 @@ Slack (hold path):      0.703ns (requirement - (clock path skew + uncertainty - 
     Location             Delay type         Delay(ns)  Physical Resource
                                                        Logical Resource(s)
     -------------------------------------------------  -------------------
-    SLICE_X15Y15.YQ      Tcko                  0.501   u_Push/rDebouce<1>
+    SLICE_X12Y13.YQ      Tcko                  0.501   u_Push/rDebouce<1>
                                                        u_Push/rDebouce_0
-    SLICE_X15Y15.BX      net (fanout=2)        0.448   u_Push/rDebouce<0>
-    SLICE_X15Y15.CLK     Tckdi       (-Th)     0.246   u_Push/rDebouce<1>
+    SLICE_X12Y13.BX      net (fanout=2)        0.448   u_Push/rDebouce<0>
+    SLICE_X12Y13.CLK     Tckdi       (-Th)     0.246   u_Push/rDebouce<1>
                                                        u_Push/rDebouce_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.703ns (0.255ns logic, 0.448ns route)
+                                                       (36.3% logic, 63.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point u_Push/rDebouce_3 (SLICE_X13Y13.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.703ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               u_Push/rDebouce_2 (FF)
+  Destination:          u_Push/rDebouce_3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.703ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         CLK_BUFGP rising at 40.000ns
+  Destination Clock:    CLK_BUFGP rising at 40.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: u_Push/rDebouce_2 to u_Push/rDebouce_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X13Y13.YQ      Tcko                  0.501   u_Push/rDebouce<3>
+                                                       u_Push/rDebouce_2
+    SLICE_X13Y13.BX      net (fanout=2)        0.448   u_Push/rDebouce<2>
+    SLICE_X13Y13.CLK     Tckdi       (-Th)     0.246   u_Push/rDebouce<3>
+                                                       u_Push/rDebouce_3
     -------------------------------------------------  ---------------------------
     Total                                      0.703ns (0.255ns logic, 0.448ns route)
                                                        (36.3% logic, 63.7% route)
@@ -593,7 +521,7 @@ Slack: 38.498ns (period - (min low pulse limit / (low pulse / period)))
   Low pulse limit: 0.751ns (Trpw)
   Physical resource: u_Distance/rCnt<0>/SR
   Logical resource: u_Distance/rCnt_0/SR
-  Location pin: SLICE_X25Y20.SR
+  Location pin: SLICE_X28Y14.SR
   Clock network: Rstb_IBUF
 --------------------------------------------------------------------------------
 Slack: 38.498ns (period - (min high pulse limit / (high pulse / period)))
@@ -602,7 +530,7 @@ Slack: 38.498ns (period - (min high pulse limit / (high pulse / period)))
   High pulse limit: 0.751ns (Trpw)
   Physical resource: u_Distance/rCnt<0>/SR
   Logical resource: u_Distance/rCnt_0/SR
-  Location pin: SLICE_X25Y20.SR
+  Location pin: SLICE_X28Y14.SR
   Clock network: Rstb_IBUF
 --------------------------------------------------------------------------------
 Slack: 38.498ns (period - (min low pulse limit / (low pulse / period)))
@@ -611,7 +539,7 @@ Slack: 38.498ns (period - (min low pulse limit / (low pulse / period)))
   Low pulse limit: 0.751ns (Trpw)
   Physical resource: u_Distance/rCnt<0>/SR
   Logical resource: u_Distance/rCnt_1/SR
-  Location pin: SLICE_X25Y20.SR
+  Location pin: SLICE_X28Y14.SR
   Clock network: Rstb_IBUF
 --------------------------------------------------------------------------------
 
@@ -628,7 +556,7 @@ Clock to Setup on destination clock CLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CLK            |    8.733|         |         |         |
+CLK            |   10.204|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
@@ -637,23 +565,23 @@ Timing summary:
 
 Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
 
-Constraints cover 26161 paths, 0 nets, and 1479 connections
+Constraints cover 26921 paths, 0 nets, and 1558 connections
 
 Design statistics:
-   Minimum period:   8.733ns{1}   (Maximum frequency: 114.508MHz)
+   Minimum period:  10.204ns{1}   (Maximum frequency:  98.001MHz)
 
 
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Wed Nov 22 09:45:02 2017 
+Analysis completed Fri Nov 24 11:20:25 2017 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 327 MB
+Peak Memory Usage: 167 MB
 
 
 

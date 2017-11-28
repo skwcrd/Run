@@ -1,69 +1,60 @@
 V3 47
-FL /root/VHDL/Sport/RUN/BCD.vhd 2017/11/01.23:01:08 P.20131013
-EN work/BCD 1511365478 FL /root/VHDL/Sport/RUN/BCD.vhd PB ieee/std_logic_1164 1381692176
-AR work/BCD/Behavioral 1511365479 \
-      FL /root/VHDL/Sport/RUN/BCD.vhd EN work/BCD 1511365478
-FL /root/VHDL/Sport/RUN/BCD_Distance.vhd 2017/11/22.09:33:42 P.20131013
-EN work/BCD_Distance 1511365470 FL /root/VHDL/Sport/RUN/BCD_Distance.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
-      PB ieee/std_logic_arith 1381692177
-AR work/BCD_Distance/Behavioral 1511365471 \
-      FL /root/VHDL/Sport/RUN/BCD_Distance.vhd EN work/BCD_Distance 1511365470
-FL /root/VHDL/Sport/RUN/Calories.vhd 2017/11/22.09:36:47 P.20131013
-EN work/Calories 1511365472 FL /root/VHDL/Sport/RUN/Calories.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
-      PB ieee/std_logic_arith 1381692177
-AR work/Calories/Behavioral 1511365473 \
-      FL /root/VHDL/Sport/RUN/Calories.vhd EN work/Calories 1511365472
-FL /root/VHDL/Sport/RUN/CLK0_5s.vhd 2017/11/22.07:26:07 P.20131013
-EN work/CLK0_5s 1511365464 FL /root/VHDL/Sport/RUN/CLK0_5s.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
-      PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/CLK0_5s/Behavioral 1511365465 \
-      FL /root/VHDL/Sport/RUN/CLK0_5s.vhd EN work/CLK0_5s 1511365464
-FL /root/VHDL/Sport/RUN/CLK1ms.vhd 2017/11/01.23:32:00 P.20131013
-EN work/CLK1ms 1511365460 FL /root/VHDL/Sport/RUN/CLK1ms.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
-      PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/CLK1ms/Behavioral 1511365461 \
-      FL /root/VHDL/Sport/RUN/CLK1ms.vhd EN work/CLK1ms 1511365460
-FL /root/VHDL/Sport/RUN/CLK1s.vhd 2017/11/01.23:22:30 P.20131013
-EN work/CLK1s 1511365462 FL /root/VHDL/Sport/RUN/CLK1s.vhd PB ieee/std_logic_1164 1381692176 \
+FL D:/RUN/BCD.vhd 2017/11/02.11:01:08 P.20131013
+EN work/BCD 1511497213 FL D:/RUN/BCD.vhd PB ieee/std_logic_1164 1381692176
+AR work/BCD/Behavioral 1511497214 \
+      FL D:/RUN/BCD.vhd EN work/BCD 1511497213
+FL D:/RUN/BCD_Distance.vhd 2017/11/24.10:35:38 P.20131013
+EN work/BCD_Distance 1511497205 FL D:/RUN/BCD_Distance.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179 PB ieee/std_logic_arith 1381692177
+AR work/BCD_Distance/Behavioral 1511497206 \
+      FL D:/RUN/BCD_Distance.vhd EN work/BCD_Distance 1511497205
+FL D:/RUN/Calories.vhd 2017/11/24.11:19:49 P.20131013
+EN work/Calories 1511497207 FL D:/RUN/Calories.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179 PB ieee/std_logic_arith 1381692177
+AR work/Calories/Behavioral 1511497208 \
+      FL D:/RUN/Calories.vhd EN work/Calories 1511497207
+FL D:/RUN/CLK0_5s.vhd 2017/11/22.20:26:08 P.20131013
+EN work/CLK0_5s 1511497199 FL D:/RUN/CLK0_5s.vhd PB ieee/std_logic_1164 1381692176 \
       PB ieee/std_logic_arith 1381692177 PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/CLK1s/Behavioral 1511365463 \
-      FL /root/VHDL/Sport/RUN/CLK1s.vhd EN work/CLK1s 1511365462
-FL /root/VHDL/Sport/RUN/Debouce.vhd 2017/11/01.23:17:10 P.20131013
-EN work/Debouce 1511365466 FL /root/VHDL/Sport/RUN/Debouce.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
-      PB ieee/std_logic_arith 1381692177
-AR work/Debouce/Behavioral 1511365467 \
-      FL /root/VHDL/Sport/RUN/Debouce.vhd EN work/Debouce 1511365466
-FL /root/VHDL/Sport/RUN/Distance.vhd 2017/11/22.09:40:56 P.20131013
-EN work/Distance 1511365480 FL /root/VHDL/Sport/RUN/Distance.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
-      PB ieee/std_logic_arith 1381692177
-AR work/Distance/Behavioral 1511365481 \
-      FL /root/VHDL/Sport/RUN/Distance.vhd EN work/Distance 1511365480
-FL /root/VHDL/Sport/RUN/FSM.vhd 2017/11/22.07:54:24 P.20131013
-EN work/FSM 1511365474 FL /root/VHDL/Sport/RUN/FSM.vhd PB ieee/std_logic_1164 1381692176
-AR work/FSM/Behavioral 1511365475 \
-      FL /root/VHDL/Sport/RUN/FSM.vhd EN work/FSM 1511365474
-FL /root/VHDL/Sport/RUN/RunTop.vhd 2017/11/22.09:42:43 P.20131013
-EN work/RunTop 1511365482 FL /root/VHDL/Sport/RUN/RunTop.vhd \
-      PB ieee/std_logic_1164 1381692176
-AR work/RunTop/Stuctural 1511365483 \
-      FL /root/VHDL/Sport/RUN/RunTop.vhd EN work/RunTop 1511365482 CP CLK1ms \
-      CP CLK1s CP CLK0_5s CP Debouce CP Time_RUN CP BCD_Distance CP Calories CP FSM \
-      CP ScanDigit CP BCD CP Distance
-FL /root/VHDL/Sport/RUN/ScanDigit.vhd 2017/11/22.09:39:25 P.20131013
-EN work/ScanDigit 1511365476 FL /root/VHDL/Sport/RUN/ScanDigit.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/std_logic_arith 1381692177 \
-      PB ieee/STD_LOGIC_UNSIGNED 1381692179
-AR work/ScanDigit/Behavioral 1511365477 \
-      FL /root/VHDL/Sport/RUN/ScanDigit.vhd EN work/ScanDigit 1511365476
-FL /root/VHDL/Sport/RUN/Time_RUN.vhd 2017/11/22.09:35:31 P.20131013
-EN work/Time_RUN 1511365468 FL /root/VHDL/Sport/RUN/Time_RUN.vhd \
-      PB ieee/std_logic_1164 1381692176 PB ieee/STD_LOGIC_UNSIGNED 1381692179 \
-      PB ieee/std_logic_arith 1381692177
-AR work/Time_RUN/Behavioral 1511365469 \
-      FL /root/VHDL/Sport/RUN/Time_RUN.vhd EN work/Time_RUN 1511365468
+AR work/CLK0_5s/Behavioral 1511497200 \
+      FL D:/RUN/CLK0_5s.vhd EN work/CLK0_5s 1511497199
+FL D:/RUN/CLK1ms.vhd 2017/11/02.11:32:00 P.20131013
+EN work/CLK1ms 1511497195 FL D:/RUN/CLK1ms.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/std_logic_arith 1381692177 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/CLK1ms/Behavioral 1511497196 \
+      FL D:/RUN/CLK1ms.vhd EN work/CLK1ms 1511497195
+FL D:/RUN/CLK1s.vhd 2017/11/02.11:22:30 P.20131013
+EN work/CLK1s 1511497197 FL D:/RUN/CLK1s.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/std_logic_arith 1381692177 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/CLK1s/Behavioral 1511497198 \
+      FL D:/RUN/CLK1s.vhd EN work/CLK1s 1511497197
+FL D:/RUN/Debouce.vhd 2017/11/02.11:17:10 P.20131013
+EN work/Debouce 1511497201 FL D:/RUN/Debouce.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179 PB ieee/std_logic_arith 1381692177
+AR work/Debouce/Behavioral 1511497202 \
+      FL D:/RUN/Debouce.vhd EN work/Debouce 1511497201
+FL D:/RUN/Distance.vhd 2017/11/24.10:39:52 P.20131013
+EN work/Distance 1511497215 FL D:/RUN/Distance.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179 PB ieee/std_logic_arith 1381692177
+AR work/Distance/Behavioral 1511497216 \
+      FL D:/RUN/Distance.vhd EN work/Distance 1511497215
+FL D:/RUN/FSM.vhd 2017/11/24.09:30:28 P.20131013
+EN work/FSM 1511497209 FL D:/RUN/FSM.vhd PB ieee/std_logic_1164 1381692176
+AR work/FSM/Behavioral 1511497210 \
+      FL D:/RUN/FSM.vhd EN work/FSM 1511497209
+FL D:/RUN/RunTop.vhd 2017/11/24.09:31:06 P.20131013
+EN work/RunTop 1511497217 FL D:/RUN/RunTop.vhd PB ieee/std_logic_1164 1381692176
+AR work/RunTop/Stuctural 1511497218 \
+      FL D:/RUN/RunTop.vhd EN work/RunTop 1511497217 CP CLK1ms CP CLK1s CP CLK0_5s \
+      CP Debouce CP Time_RUN CP BCD_Distance CP Calories CP FSM CP ScanDigit CP BCD \
+      CP Distance
+FL D:/RUN/ScanDigit.vhd 2017/11/24.09:33:36 P.20131013
+EN work/ScanDigit 1511497211 FL D:/RUN/ScanDigit.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/std_logic_arith 1381692177 PB ieee/STD_LOGIC_UNSIGNED 1381692179
+AR work/ScanDigit/Behavioral 1511497212 \
+      FL D:/RUN/ScanDigit.vhd EN work/ScanDigit 1511497211
+FL D:/RUN/Time_RUN.vhd 2017/11/22.22:35:32 P.20131013
+EN work/Time_RUN 1511497203 FL D:/RUN/Time_RUN.vhd PB ieee/std_logic_1164 1381692176 \
+      PB ieee/STD_LOGIC_UNSIGNED 1381692179 PB ieee/std_logic_arith 1381692177
+AR work/Time_RUN/Behavioral 1511497204 \
+      FL D:/RUN/Time_RUN.vhd EN work/Time_RUN 1511497203
